@@ -9,6 +9,7 @@ header {
   align-items: center;
   border-bottom: 1px solid #c6c6c6;
   padding: 16px;
+  margin-bottom: 10px;
 }
 .logo {
   width: 127px;
@@ -19,12 +20,14 @@ header {
   height: 34px;
   border-radius: 50px;
 }
-.username-text {
+.username-text,
+.username-caption {
   font-size: 13px;
   font-weight: 700;
 }
 
-.location-text {
+.location-text,
+.caption {
   font-size: 12px;
   font-weight: 400;
 }
@@ -38,4 +41,7 @@ header {
 .dm-icon,
 .comment-icon {
   width: 34px;
+}
+.icons {
+  background-color: red;
 }
