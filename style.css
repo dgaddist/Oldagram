@@ -1,3 +1,41 @@
 body {
-  color: red;
+  font-family: "Source Sans 3", sans-serif;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c6c6c6;
+  padding: 16px;
+}
+.logo {
+  width: 127px;
+}
+.avatar-logo,
+.post-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+}
+.username-text {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.location-text {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.post-image {
+  width: 375px;
+  height: 375px;
+}
+
+.heart-icon,
+.dm-icon,
+.comment-icon {
+  width: 34px;
 }
