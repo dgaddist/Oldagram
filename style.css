@@ -20,10 +20,7 @@ background-color: rgb(237, 237, 237);
   background-color: white;
   margin-bottom: 20px;
 }
-.courbet-container {
-  margin-top: 20px;
-  background-color: white;
-}
+.courbet-container,
 .ducreux-container {
   margin-top: 20px;
   background-color: white;
@@ -37,6 +34,7 @@ header {
   align-items: center;
   border-bottom: 1px solid #c6c6c6;
   background-color: white;
+  padding: 0px 15px 10px 8px;
 }
 .logo {
   width: 127px;
@@ -50,7 +48,9 @@ oldgram post
   margin: 0;
   padding-left: 7px;
 }
-
+.post-logo {
+  margin-left: 10px;
+}
 .avatar-logo,
 .post-logo {
   width: 34px;
@@ -86,6 +86,7 @@ and user comment section
   padding-right: 12px;
 }
 .icons {
+  padding-top: 10px;
   padding-left: 5px;
 }
 
@@ -101,5 +102,5 @@ and user comment section
 
 .username-caption {
   margin: 0;
-  padding: 12px 0px 16px 10px;
+  padding: 10px 0px 16px 10px;
 }
