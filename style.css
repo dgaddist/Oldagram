@@ -1,29 +1,50 @@
 body {
   font-family: "Source Sans 3", sans-serif;
-  margin: 0;
   background-color: rgb(237, 237, 237);
 }
 
+/*
+background-color: rgb(237, 237, 237);
+*/
 .container {
   width: 375px;
   margin: 0 auto;
-  background-color: white;
+  background-color: rgb(237, 237, 237);
 }
 .container-user {
   display: flex;
+  padding-top: 10px;
 }
 
+.vangogh-container {
+  background-color: white;
+  margin-bottom: 20px;
+}
+.courbet-container {
+  margin-top: 20px;
+  background-color: white;
+}
+.ducreux-container {
+  margin-top: 20px;
+  background-color: white;
+}
+/*
+header
+*/
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #c6c6c6;
-  padding: 16px;
-  margin-bottom: 10px;
+  background-color: white;
 }
 .logo {
   width: 127px;
 }
+
+/*
+oldgram post
+*/
 .username-text,
 .location-text {
   margin: 0;
@@ -54,6 +75,10 @@ header {
   margin-top: 15px;
 }
 
+/*
+Like, comment, and share section
+and user comment section
+*/
 .heart-icon,
 .dm-icon,
 .comment-icon {
@@ -73,6 +98,7 @@ header {
 .like-count {
   padding-left: 10px;
 }
+
 .username-caption {
   margin: 0;
   padding: 12px 0px 16px 10px;
