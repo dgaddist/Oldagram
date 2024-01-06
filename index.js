@@ -1,7 +1,7 @@
 import { posts } from "./data.js";
 
 function getFeedHtml() {
-  let getFeedHtml = ``;
+  let feedHtml = ``;
 
   posts.forEach(function (post) {
     feedHtml += `
@@ -44,4 +44,9 @@ function getFeedHtml() {
   });
   return feedHtml;
 }
-getFeedHtml();
+
+function render() {
+  const feed = document.getElementById("feed");
+  feed.innerHTML = getFeedHtml();
+}
+render();
