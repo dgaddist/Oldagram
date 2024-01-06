@@ -1,30 +1,47 @@
-const posts = [
-  {
-    name: "Vincent van Gogh",
-    username: "vincey1853",
-    location: "Zundert, Netherlands",
-    avatar: "images/avatar-vangogh.jpg",
-    post: "images/post-vangogh.jpg",
-    comment: "just took a few mushrooms lol",
-    likes: 21,
-  },
-  {
-    name: "Gustave Courbet",
-    username: "gus1819",
-    location: "Ornans, France",
-    avatar: "images/avatar-courbet.jpg",
-    post: "images/post-courbet.jpg",
-    comment: "i'm feelin a bit stressed tbh",
-    likes: 4,
-  },
-  {
-    name: "Joseph Ducreux",
-    username: "jd1735",
-    location: "Paris, France",
-    avatar: "images/avatar-ducreux.jpg",
-    post: "images/post-ducreux.jpg",
-    comment:
-      "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
-    likes: 152,
-  },
-];
+import { posts } from "./data.js";
+
+console.log(posts);
+
+function getFeedHtml() {
+  let getFeedHtml = ``;
+
+  for (let post of posts) {
+    feedHtml += `
+        <div class="vangogh-container">
+          <div class="container-user">
+            <img
+              class="user-icon"
+              src="${post.avatar}"
+              alt="vangogh avatar"
+            />
+            <div>
+              <h1 class="username-text">${post.name}</h1>
+              <h2 class="location-text">${post.location}</h2>
+            </div>
+          </div>
+          <img
+            class="post-image"
+            src="${post.post}"
+            alt="vangogh post"
+          />
+          <div class="icons">
+            <img
+              class="heart-icon"
+              src="./images/icon-heart.png"
+              alt="heart icon"
+            />
+            <img
+              class="comment-icon"
+              src="./images/icon-comment.png"
+              alt="comment icon"
+            />
+            <img class="dm-icon" src="./images/icon-dm.png" alt="DM icon" />
+          </div>
+          <h3 class="like-count">${post.likes}</h3>
+          <p class="username-caption">
+            ${post.username}
+            <span class="caption">${post.comment}</span>
+          </p>
+        </div>`;
+  }
+}
