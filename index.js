@@ -1,11 +1,9 @@
 import { posts } from "./data.js";
 
-console.log(posts);
-
 function getFeedHtml() {
   let getFeedHtml = ``;
 
-  for (let post of posts) {
+  posts.forEach(function (post) {
     feedHtml += `
         <div class="vangogh-container">
           <div class="container-user">
@@ -43,5 +41,7 @@ function getFeedHtml() {
             <span class="caption">${post.comment}</span>
           </p>
         </div>`;
-  }
+  });
+  return feedHtml;
 }
+getFeedHtml();
