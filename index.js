@@ -1,8 +1,18 @@
 import { posts } from "./data.js";
 
 document.addEventListener("click", function (event) {
-  console.log(event.target.dataset.heart);
+  if (event.target.dataset.heart) {
+    handleLikeClick(event.target.dataset.heart);
+  }
 });
+
+function handleLikeClick(postId) {
+  const targetPostObj = posts.filter(function (post) {
+    return post.uuid === postId;
+  })[0];
+  targetPostObj.likes++;
+  render();
+}
 
 function getFeedHtml() {
   let feedHtml = ``;
