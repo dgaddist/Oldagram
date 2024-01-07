@@ -10,7 +10,13 @@ function handleLikeClick(postId) {
   const targetPostObj = posts.filter(function (post) {
     return post.uuid === postId;
   })[0];
-  targetPostObj.likes++;
+
+  if (targetPostObj.isLiked) {
+    targetPostObj.likes--;
+  } else {
+    targetPostObj.likes++;
+  }
+  targetPostObj.isLiked = !targetPostObj.isLiked;
   render();
 }
 
