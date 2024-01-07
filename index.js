@@ -5,6 +5,11 @@ document.addEventListener("click", function (event) {
     handleLikeClick(event.target.dataset.heart);
   }
 });
+document.addEventListener("dblclick", function (e) {
+  if (e.target.dataset.post) {
+    handlePostClick(e.target.dataset.post);
+  }
+});
 
 function handleLikeClick(postId) {
   const targetPostObj = posts.filter(function (post) {
@@ -19,12 +24,6 @@ function handleLikeClick(postId) {
   targetPostObj.isLiked = !targetPostObj.isLiked;
   render();
 }
-
-document.addEventListener("dblclick", function (e) {
-  if (e.target.dataset.post) {
-    handlePostClick(e.target.dataset.post);
-  }
-});
 
 function handlePostClick(postId) {
   const targetPostObj = posts.filter(function (post) {

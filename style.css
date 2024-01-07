@@ -90,10 +90,11 @@ and user comment section
 }
 .heart-icon:hover {
   cursor: pointer;
+  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
 }
 .icons:hover {
   background-color: white;
-  opacity: 80%;
+  opacity: 70%;
 }
 
 .icons {
@@ -107,4 +108,9 @@ and user comment section
 }
 .username-caption {
   padding: 10px 0px 16px 10px;
+}
+
+.coded {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }
