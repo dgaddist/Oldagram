@@ -20,6 +20,26 @@ function handleLikeClick(postId) {
   render();
 }
 
+document.addEventListener("dblclick", function (e) {
+  if (e.target.dataset.post) {
+    handlePostClick(e.target.dataset.post);
+  }
+});
+
+function handlePostClick(postId) {
+  const targetPostObj = posts.filter(function (post) {
+    return post.uuid === postId;
+  })[0];
+
+  if (targetPostObj.isPostLiked) {
+    targetPostObj.likes--;
+  } else {
+    targetPostObj.likes++;
+  }
+  targetPostObj.isPostLiked = !targetPostObj.isPostLiked;
+  render();
+}
+
 function getFeedHtml() {
   let feedHtml = ``;
 
@@ -42,6 +62,7 @@ function getFeedHtml() {
             src="${post.post}"
             alt="vangogh post"
             id="image-1"
+            data-post="${post.uuid}"
           />
           <div class="icons">
             <img
