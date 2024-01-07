@@ -9,6 +9,7 @@ export const posts = [
     post: "images/post-vangogh.jpg",
     comment: "just took a few mushrooms lol",
     likes: 21,
+    isLiked: false,
     uuid: uuidv4(),
   },
   {
@@ -19,6 +20,7 @@ export const posts = [
     post: "images/post-courbet.jpg",
     comment: "i'm feelin a bit stressed tbh",
     likes: 4,
+    isLiked: false,
     uuid: uuidv4(),
   },
   {
@@ -30,6 +32,7 @@ export const posts = [
     comment:
       "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
     likes: 152,
+    isLiked: false,
     uuid: uuidv4(),
   },
 ];
