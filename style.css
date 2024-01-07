@@ -88,6 +88,14 @@ and user comment section
   width: 25px;
   padding-right: 12px;
 }
+.heart-icon:hover {
+  cursor: pointer;
+}
+.icons:hover {
+  background-color: white;
+  opacity: 80%;
+}
+
 .icons {
   padding: 10px 0px 0px 5px;
 }
